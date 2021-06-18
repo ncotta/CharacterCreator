@@ -3,14 +3,13 @@
 
 
 #include "moves.h"
-#include <vector>   
-using namespace std;
+#include <vector>
 
 class Race {
 protected:
     string name;
     string appearance;
-    int stats[3];
+    int stats[4];  // {strength, magic, defense, speed}
     vector<Move> moves;
 
 public:
@@ -48,7 +47,7 @@ class Automaton : public Race {
 public:
     Automaton(int *statsList, vector<Move>& movesList)
         : Race("Automaton",
-            "a feeble machine far past it's warranty. You can remember the lost arts of civilization before The Breaking.",
+            "a feeble machine far past it's warranty. You can remember the lost arts of civilization before The Schism.",
             statsList,
             movesList) {}
 };

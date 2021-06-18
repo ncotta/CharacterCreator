@@ -18,6 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="class.h" />
+    <ClInclude Include="moves.h" />
+    <ClInclude Include="race.h" />
+    <ClInclude Include="selection.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="class.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="moves.cpp" />
+    <ClCompile Include="race.cpp" />
+    <ClCompile Include="selection.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,18 +151,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\TextRPG\TextRPG\class.cpp" />
-    <ClCompile Include="..\..\TextRPG\TextRPG\main.cpp" />
-    <ClCompile Include="..\..\TextRPG\TextRPG\moves.cpp" />
-    <ClCompile Include="..\..\TextRPG\TextRPG\race.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\TextRPG\TextRPG\class.h" />
-    <ClInclude Include="..\..\TextRPG\TextRPG\moves.h" />
-    <ClInclude Include="..\..\TextRPG\TextRPG\race.h" />
-    <ClInclude Include="..\..\TextRPG\TextRPG\selection.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

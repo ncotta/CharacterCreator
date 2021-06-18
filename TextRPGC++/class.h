@@ -8,7 +8,7 @@ class Class_ {
 protected:
     string name;
     string appearance;
-    int stats[3];
+    int stats[4];    // {strength, magic, defense, speed}
 
 public:
     Class_();
@@ -25,7 +25,7 @@ public:
         : Class_("Brute",
             "Scars mark you as someone with fighting experience. Your arms are corded with muscles.",
             statsList) {
-        statsList[0] += 2;
+        statsList[0] += 2;  // strength
     }
 };
 
@@ -34,22 +34,24 @@ class MonkEY : public Class_ {
 public:
     MonkEY(int *statsList)
         : Class_("Monk-ey",
-            "As one of the monks from beyond the Great Eastern Sea, your unique fighting style involves feces, unfortunately",
+            "As one of the monks from beyond the Great Eastern Sea, of Clan Gorilla. You like bananas.",
             statsList) {
-        statsList[2] += 2;
+        statsList[2] += 2;  // defense
     }
 };
 
-// Witch Doctor Class ==============================================
+// Witch Doctor Class ===========================================
 class WitchDoctor : public Class_ {
 public:
     WitchDoctor(int *statsList)
         : Class_("Witch Doctor",
             "Exotic and offputting, you were a slave from the south. No one knows if you're a witch or a doctor.",
             statsList) {
-        statsList[1] += 2;
+        statsList[1] += 2;  // magic
     }
 
 };
+
+// Speed class?? ===============================================
 
 #endif
