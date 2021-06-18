@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class.h" />
+    <ClInclude Include="helperFunctions.h" />
     <ClInclude Include="moves.h" />
     <ClInclude Include="race.h" />
     <ClInclude Include="selection.h" />

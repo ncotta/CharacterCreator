@@ -3,6 +3,7 @@
 
 #include "race.h"
 #include "class.h"
+#include <iostream>
 using namespace std;
 
 class Selection {
