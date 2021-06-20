@@ -1,11 +1,13 @@
 #include <iostream>
-#include <string>
 #include <Windows.h>
 
-#include "class.h"
-#include "race.h"
+#include "selection.h"
 
 int main(int argc, char* argv[]) {
+
+	Selection mySelection;
+	mySelection.race_select();
+	mySelection.class_select();
 
 	return 0;
 }

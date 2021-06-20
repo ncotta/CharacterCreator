@@ -1,6 +1,9 @@
 #include "selection.h"
 
-Selection::Selection() {} 
+Selection::Selection() {
+	for (int i = 0; i < 4; i++)
+		stats[i] = 0;
+} 
 
 Selection::Selection(int* statsIn) {
 	for (int i = 0; i < 4; i++)
@@ -32,7 +35,7 @@ Race Selection::race_select() {
 		}
 
 		if ( (cin >> choice) && (choice <= 3) ) {
-			continue;
+			break;
 		}
 		else {
 			cout << "Invalid input!" << endl;
@@ -103,7 +106,7 @@ Class_ Selection::class_select() {
 		}
 
 		if ((cin >> choice) && (choice <= 3)) {
-			continue;
+			break;
 		}
 		else {
 			cout << "Invalid input!" << endl;
@@ -128,3 +131,10 @@ Class_ Selection::class_select() {
 	return result;
 
 }
+
+/*
+* int main() {
+*	Selection mySelection;
+*	mySelection.race_select();
+*	mySelection.class_select();
+*/
