@@ -19,3 +19,7 @@ Class_::~Class_() {}
 void Class_::queryLooks() {
     cout << appearance << endl;
 }
+
+string Class_::getName() {
+    return name;
+}

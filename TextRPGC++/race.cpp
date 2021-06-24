@@ -27,6 +27,19 @@ void Race::queryName() {
     cout << "You are one of the " << name << " " << res << endl;
 }
 
+string Race::getName() {
+    return name;
+}
+
+void Race::printMoves() {
+    if (moves.size() == 0)
+        cout << "SOMETHING WENT WRONG: NO MOVES!!" << endl;
+
+    for (int i = 0; i < moves.size(); i++) {
+        moves[i].printInfo();
+    }
+}
+
 void Race::queryLooks() {
     cout << "You appear to be..." << appearance << endl;
 }

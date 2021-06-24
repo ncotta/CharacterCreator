@@ -24,7 +24,6 @@ Race Selection::race_select() {
 						"Monster-A   (good defense and sun magic, well-rounded)"};  
 	
 	int choice;
-	vector<Move> moves;
 	Race result;
 
 	while (true) {
@@ -49,13 +48,8 @@ Race Selection::race_select() {
 			stats[1] = 6;
 			stats[2] = 10;
 			stats[3] = 10;
-				
-			moves.push_back(Rake());
-			moves.push_back(Fangs());
-			moves.push_back(Slam());
-			moves.push_back(Shed());
 
-			result = Lizard(stats, moves);
+			result = Lizard(stats);
 			break;
 		case 2:  // Automaton
 			stats[0] = 8;
@@ -63,11 +57,7 @@ Race Selection::race_select() {
 			stats[2] = 8;
 			stats[3] = 8;
 
-			moves.push_back(Fire());
-			moves.push_back(Repair());
-			moves.push_back(Error());
-
-			result = Automaton(stats, moves);
+			result = Automaton(stats);
 			break;
 		case 3:  // MonsterA
 			stats[0] = 8;
@@ -75,12 +65,7 @@ Race Selection::race_select() {
 			stats[2] = 12;
 			stats[3] = 8;
 
-			moves.push_back(Thorns());
-			moves.push_back(Tangle());
-			moves.push_back(Absorb());
-			moves.push_back(Poison());
-
-			result = MonsterA(stats, moves);
+			result = MonsterA(stats);
 			break;
 		default:
 			result = Race();

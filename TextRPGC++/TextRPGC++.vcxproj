@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class.h" />
+    <ClInclude Include="enemyHandler.h" />
     <ClInclude Include="helperFunctions.h" />
     <ClInclude Include="moves.h" />
     <ClInclude Include="race.h" />
@@ -27,6 +28,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="class.cpp" />
+    <ClCompile Include="enemyHandler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="moves.cpp" />
     <ClCompile Include="race.cpp" />

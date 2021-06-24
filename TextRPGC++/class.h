@@ -16,6 +16,7 @@ public:
     ~Class_();
 
     void queryLooks();
+    string getName();
 };
 
 // Brute Class ==============================================
