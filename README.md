@@ -6,8 +6,6 @@ Made by Niklaas Cotta.<br/>
 # ~~~ TO-DO ~~~
 - Map
   - Copy over map details from python version
-- Random enemy generation
-  - Moves are not kept after object creation
 - Story
   - Copy over story details from python version
   - Flesh out story more
