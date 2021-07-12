@@ -19,6 +19,7 @@ public:
     void applyEffect(int newEffect);
     void applyDamage(int n);
     void printInfo();
+    void printName();
 };
 
 // Dummy Moves ==============================================

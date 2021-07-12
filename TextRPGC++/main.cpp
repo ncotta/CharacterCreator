@@ -19,8 +19,11 @@ int main(int argc, char* argv[]) {
 	cout << "Race: " << testRace.getName() << endl;
 	cout << "Class: " << testClass.getName() << endl;
 	cout << "Name: " << testName << endl;
-	cout << "Moves: " << endl;
-	testRace.printMoves();
+	cout << "Moves: ";
+	for (int i = 0; i < testMoves.size(); i++) {
+		testMoves[i].printName();
+		(i != testMoves.size() - 1) ? (cout << ", ") : (cout << "\n");
+	}
 
 	return 0;
 }

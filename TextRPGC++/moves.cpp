@@ -22,11 +22,16 @@ void Move::applyDamage(int n) {
 }
 
 void Move::printInfo() {
-    cout << "=== Move Information! ===" << endl;
+    cout << "=== Move Information ===" << endl;
     cout << " Name: " << name << endl;
     cout << " Damage: " << damage << endl;
+    cout << " Tag: " << tag << endl;
     cout << " Effect: " << effect << endl;
     cout << "=========================" << endl;
+}
+
+void Move::printName() {
+    cout << name;
 }
 
 // main function ========================================================

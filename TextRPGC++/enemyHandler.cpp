@@ -15,14 +15,32 @@ randEnemy::randEnemy() {
 	classes[2] = new WitchDoctor(stats);
 
 	// Name generation
-	string prefixLizard[3] = { "Spiked", "Starving", "Rabid" };
-	string prefixAutomaton[3] = { "Rusted", "Malfunctioning", "Defective" };
-	string prefixMonsterA[3] = { "Rotted", "Blighted", "Diseased" };
+	prefixLizard[0] = "Spiked";
+	prefixLizard[1] = "Starving";
+	prefixLizard[2] = "Rabid";
+
+	prefixAutomaton[0] = "Rusted";
+	prefixAutomaton[1] = "Malfunctioning";
+	prefixAutomaton[2] = "Defective";
+
+	prefixMonsterA[0] = "Rotted";
+	prefixMonsterA[1] = "Blighted";
+	prefixMonsterA[2] = "Diseased";
 
 	// Moves lists (put in moves.h?)
-	vector<Move> lizardMoves = { Rake(), Fangs(), Slam(), Shed() };
-	vector<Move> automatonMoves = { Fire(), Repair(), Error() };
-	vector<Move> monsteraMoves = { Thorns(), Tangle(), Absorb(), Poison() };
+	lizardMoves.push_back(Rake());
+	lizardMoves.push_back(Fangs());
+	lizardMoves.push_back(Slam());
+	lizardMoves.push_back(Shed());
+
+	automatonMoves.push_back(Fire());
+	automatonMoves.push_back(Repair());
+	automatonMoves.push_back(Error());
+
+	monsteraMoves.push_back(Thorns());
+	monsteraMoves.push_back(Tangle());
+	monsteraMoves.push_back(Absorb());
+	monsteraMoves.push_back(Poison());
 }
 
 randEnemy::~randEnemy() {
@@ -59,10 +77,10 @@ string randEnemy::randomName(Race raceIn) {
 }
 
 vector<Move> randEnemy::randomMoves(Race raceIn) {
-	int numRaces = sizeof(stats)/sizeof(stats[0]);
-	int start = rand() % numRaces;  // 2  moves[2:
-	int remaining = numRaces - (start + 1);  // 0
-	int end = rand() % remaining + start;  // moves[2:
+	//int numRaces = sizeof(stats)/sizeof(stats[0]);
+	//int start = rand() % numRaces;  // 2  moves[2:
+	//int remaining = numRaces - (start + 1);  // 0
+	//int end = rand() % remaining + start;  // moves[2:
 
 	vector<Move> result;
 	string raceName = raceIn.getName();
