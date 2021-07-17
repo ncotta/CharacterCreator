@@ -12,7 +12,7 @@ Race::Race(string nameIn, string appearanceIn,
     name = nameIn;
     appearance = appearanceIn;
 
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < (sizeof(stats) / sizeof(stats[0])); i++)
         stats[i] = statsIn[i];
 
     moves = movesIn;
@@ -38,10 +38,6 @@ void Race::printMoves() {
     for (int i = 0; i < moves.size(); i++) {
         moves[i].printInfo();
     }
-}
-
-void Race::queryLooks() {
-    cout << "You appear to be..." << appearance << endl;
 }
 
 /* int main() {

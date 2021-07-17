@@ -10,7 +10,7 @@ Class_::Class_(string nameIn, string appearanceIn, int *statsIn) {
     name = nameIn;
     appearance = appearanceIn;
     
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < (sizeof(stats) / sizeof(stats[0])); i++)
         stats[i] = statsIn[i];
 }
 

@@ -12,12 +12,12 @@ protected:
 	Class_* classes[3];
 
 	// Name generation
-	string prefixLizard[3];
+	string prefixBeast[3];
 	string prefixAutomaton[3];
 	string prefixMonsterA[3];
 
 	// Moves lists (put in moves.h?)
-	vector<Move> lizardMoves;
+	vector<Move> beastMoves;
 	vector<Move> automatonMoves;
 	vector<Move> monsteraMoves;
 

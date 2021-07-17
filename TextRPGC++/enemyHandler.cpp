@@ -2,22 +2,22 @@
 #include <iostream>
 
 randEnemy::randEnemy() {
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < (sizeof(stats) / sizeof(stats[0])); i++) {
 		stats[i] = rand() % (15 - 6) + 6;
 	}
 
-	races[0] = new Lizard(stats);
+	races[0] = new Werebeast(stats);
 	races[1] = new Automaton(stats);
 	races[2] = new MonsterA(stats);
 	
-	classes[0] = new Brute(stats);
+	classes[0] = new Master(stats);
 	classes[1] = new MonkEY(stats);
-	classes[2] = new WitchDoctor(stats);
+	classes[2] = new Sorceress(stats);
 
 	// Name generation
-	prefixLizard[0] = "Spiked";
-	prefixLizard[1] = "Starving";
-	prefixLizard[2] = "Rabid";
+	prefixBeast[0] = "Starved";
+	prefixBeast[1] = "Rabid";
+	prefixBeast[2] = "Depraved";
 
 	prefixAutomaton[0] = "Rusted";
 	prefixAutomaton[1] = "Malfunctioning";
@@ -28,10 +28,10 @@ randEnemy::randEnemy() {
 	prefixMonsterA[2] = "Diseased";
 
 	// Moves lists (put in moves.h?)
-	lizardMoves.push_back(Rake());
-	lizardMoves.push_back(Fangs());
-	lizardMoves.push_back(Slam());
-	lizardMoves.push_back(Shed());
+	beastMoves.push_back(Rake());
+	beastMoves.push_back(Fangs());
+	beastMoves.push_back(Slam());
+	beastMoves.push_back(Shed());
 
 	automatonMoves.push_back(Fire());
 	automatonMoves.push_back(Repair());
@@ -44,20 +44,21 @@ randEnemy::randEnemy() {
 }
 
 randEnemy::~randEnemy() {
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < (sizeof(races) / sizeof(races[0])); i++)
 		delete races[i];
+
+	for (int i = 0; i < (sizeof(classes) / sizeof(classes[0])); i++)
 		delete classes[i];
-	}
 }
 
 Race randEnemy::randomRace() {
-	int randNum = rand() % 3;
+	int randNum = rand() % (sizeof(races) / sizeof(races[0]));
 	return *races[randNum];
 
 }
 
 Class_ randEnemy::randomClass() {
-	int randNum = rand() % 3;
+	int randNum = rand() % (sizeof(classes) / sizeof(classes[0]));
 	return *classes[randNum];
 }
 
@@ -66,8 +67,8 @@ string randEnemy::randomName(Race raceIn) {
 	string prefix;
 	string raceName = raceIn.getName();
 
-	if (raceName == "Lizard")
-		prefix = prefixLizard[randNum];
+	if (raceName == "Werebeast")
+		prefix = prefixBeast[randNum];
 	else if (raceName == "Automaton")
 		prefix = prefixAutomaton[randNum];
 	else if (raceName == "Monster-a")
@@ -85,8 +86,8 @@ vector<Move> randEnemy::randomMoves(Race raceIn) {
 	vector<Move> result;
 	string raceName = raceIn.getName();
 
-	if (raceName == "Lizard")
-		result = lizardMoves;
+	if (raceName == "Werebeast")
+		result = beastMoves;
 	else if (raceName == "Automaton")
 		result = automatonMoves;
 	else if (raceName == "Monster-a")

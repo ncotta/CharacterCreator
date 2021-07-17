@@ -38,7 +38,7 @@ public:
     Retaliate() : Move("Retaliate", 2) {}
 };
 
-// Lizard Moves ==============================================
+// Werebeast Moves ==============================================
 class Rake : public Move {
 public:
     Rake() : Move("Rake", 4) {}
@@ -54,15 +54,15 @@ public:
     Slam() : Move("Tail Slam", 2) {}
 };
 
-class Shed : public Move {
+class Regenerate : public Move {
 public:
-    Shed() : Move("Skin Shed", -2, "self") {}
+    Regenerate() : Move("Regenerate", -2, "self") {}
 };
 
 // Automaton Moves ==============================================
 class Fire : public Move {
 public:
-    Fire() : Move("Molten Core", 6) {}
+    Fire() : Move("Missiles", 6) {}
 };
 
 class Repair : public Move {

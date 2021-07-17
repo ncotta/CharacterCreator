@@ -22,7 +22,6 @@ public:
     void queryName();
     string getName();
     void printMoves();
-    void queryLooks();
 };
 
 // Dummy Race ==============================================
@@ -37,16 +36,16 @@ public:
             dummyMoves) {}
 };
 
-// Lizard Race ============================================
-class Lizard : public Race {
+// Werebeast Race ============================================
+class Werebeast : public Race {
 private:
-    vector<Move> lizardMoves = { Rake(), Fangs(), Slam(), Shed() };
+    vector<Move> beastMoves = { Rake(), Fangs(), Slam(), Regenerate() };
 public:
-    Lizard(int *statsList)
-        : Race("Lizard",
-            "a hulking lizard with green scales that glisten in the sun. You lick your eyeball and bare your teeth in a menacing way.",
+    Werebeast(int *statsList)
+        : Race("Werebeast",
+            "a powerful looking creature. You appear human but with beastly characteristics.",
             statsList,
-            lizardMoves) {}
+            beastMoves) {}
 };
 
 // Automaton Race ==========================================
@@ -56,7 +55,7 @@ private:
 public:
     Automaton(int *statsList)
         : Race("Automaton",
-            "a feeble machine far past it's warranty. You can remember the lost arts of civilization before The Schism.",
+            "an early automaton. When Helios created you, their process was not as refined as it is now.",
             statsList,
             automatonMoves) {}
 };
@@ -68,21 +67,21 @@ private:
 public:
     MonsterA(int *statsList)
         : Race("Monster-a",
-            "a plant with beautiful fenestrations. Gaia's Blessing gives you sentience.",
+            "a savage and wild sentient plant. A life deity has granted you both knowledge and power.",
             statsList,
             monsteraMoves) {}
 };
 
 // Tutorial Enemy Race ===================================
-class Beast : public Race {
+class Creature : public Race {
 private:
-    vector<Move> beastMoves = { Moan() };
+    vector<Move> creatureMoves = { Moan() };
 public:
-    Beast(int *statsList)
-        : Race("Beast",
+    Creature(int *statsList)
+        : Race("Creature",
             "Only a creature touched by a Prophet would be affected so",
             statsList,
-            beastMoves) {}
+            creatureMoves) {}
 };
 
-#endif`
+#endif

@@ -19,14 +19,15 @@ public:
     string getName();
 };
 
-// Brute Class ==============================================
-class Brute : public Class_ {
+// Weapons Master Class ==============================================
+class Master : public Class_ {
 public:
-    Brute(int *statsList)
-        : Class_("Brute",
-            "Scars mark you as someone with fighting experience. Your arms are corded with muscles.",
+    Master(int *statsList)
+        : Class_("Weapons Master",
+            "Many scars signify you have quite a lot of battle experience. What you lack in magic you "
+            "make up for in battle knowledge and a mastery of most weapons.",
             statsList) {
-        statsList[0] += 2;  // strength
+        statsList[0] += 2;  // +str
     }
 };
 
@@ -35,24 +36,24 @@ class MonkEY : public Class_ {
 public:
     MonkEY(int *statsList)
         : Class_("Monk-ey",
-            "As one of the monks from beyond the Great Eastern Sea, of Clan Gorilla. You like bananas.",
+            "You are a battle monk initiate from beyond the Great Eastern Sea. Your defensive style " 
+            "can emulate various primate species around the island you trained at. Bananas are your favorite food, coincidentally.",
             statsList) {
-        statsList[2] += 2;  // defense
+        statsList[2] += 2;  // +def
     }
 };
 
-// Witch Doctor Class ===========================================
-class WitchDoctor : public Class_ {
+// Sorcerer/Sorceress Class ===========================================
+class Sorceress : public Class_ {
 public:
-    WitchDoctor(int *statsList)
-        : Class_("Witch Doctor",
-            "Exotic and offputting, you were a slave from the south. No one knows if you're a witch or a doctor.",
+    Sorceress(int *statsList)
+        : Class_("Sorceress",
+            "Dragons have granted you enormous raw magical talent. But because of this, "
+            "you were unable to hone this power at an academy, and have little control as of yet.",
             statsList) {
-        statsList[1] += 2;  // magic
+        statsList[1] += 2;  // +mag
     }
 
 };
-
-// Speed class?? ===============================================
 
 #endif
