@@ -17,6 +17,7 @@ public:
 
     void queryLooks();
     string getName();
+    int *getStats();
 };
 
 // Weapons Master Class ==============================================

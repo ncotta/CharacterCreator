@@ -15,12 +15,12 @@ Race::Race(string nameIn, string appearanceIn,
     for (int i = 0; i < (sizeof(stats) / sizeof(stats[0])); i++)
         stats[i] = statsIn[i];
 
-    moves = movesIn;
+    // moves = movesIn;  TODO weird fucking errors...
 }
 
 Race::~Race() {}
 
-void Race::queryName() {
+void Race::queryLooks() {
     string suffix[3] = { "clan.", "people.", "race." };
     srand(time(0));
     string res = suffix[rand() % 3];
@@ -38,6 +38,10 @@ void Race::printMoves() {
     for (int i = 0; i < moves.size(); i++) {
         moves[i].printInfo();
     }
+}
+
+vector<Move> Race::getMoves() {
+    return moves;
 }
 
 /* int main() {

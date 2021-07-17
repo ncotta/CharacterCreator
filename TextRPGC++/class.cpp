@@ -23,3 +23,7 @@ void Class_::queryLooks() {
 string Class_::getName() {
     return name;
 }
+
+int* Class_::getStats() {
+    return stats;
+}

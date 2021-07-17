@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="character.h" />
     <ClInclude Include="class.h" />
     <ClInclude Include="enemyHandler.h" />
     <ClInclude Include="helperFunctions.h" />
@@ -27,6 +28,7 @@
     <ClInclude Include="selection.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="character.cpp" />
     <ClCompile Include="class.cpp" />
     <ClCompile Include="enemyHandler.cpp" />
     <ClCompile Include="main.cpp" />

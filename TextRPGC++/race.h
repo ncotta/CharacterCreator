@@ -4,6 +4,7 @@
 
 #include "moves.h"
 #include <vector>
+#include <iostream>
 
 
 class Race {
@@ -19,9 +20,10 @@ public:
         int *statsIn, vector<Move>& movesIn);
     ~Race();
 
-    void queryName();
+    void queryLooks();
     string getName();
     void printMoves();
+    vector<Move> getMoves();
 };
 
 // Dummy Race ==============================================
@@ -51,7 +53,8 @@ public:
 // Automaton Race ==========================================
 class Automaton : public Race {
 private:
-    vector<Move> automatonMoves = { Fire(), Repair(), Error() };
+    // vector<Move> automatonMoves = { Fire(), Repair(), Error() };
+    vector<Move> automatonMoves = { Rake(), Fangs(), Slam(), Regenerate() };
 public:
     Automaton(int *statsList)
         : Race("Automaton",

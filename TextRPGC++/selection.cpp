@@ -25,15 +25,17 @@ Race Selection::race_select() {
 	
 	int choice;
 	Race result;
+	int raceLen = sizeof(races) / sizeof(races[0]);
 
 	while (true) {
 		cout << "Pick a race!" << endl;
-		for (int i = 0; i < (sizeof(races) / sizeof(races[0])); i++) {
+		for (int i = 0; i < raceLen; i++) {
 			cout << "[" << i + 1 << "] " << races[i] << endl;
-			// Sleep(0.25);
 		}
+		cout << ">> ";
 
-		if ( (cin >> choice) && (choice <= (sizeof(races) / sizeof(races[0]))) ) {  // this looks gross
+		if ((cin >> choice) && (int(choice) <= raceLen)) {
+			cout << choice << endl;
 			break;
 		}
 		else {
@@ -52,12 +54,16 @@ Race Selection::race_select() {
 			result = Werebeast(stats);
 			break;
 		case 2:  // Automaton
+			cout << "You have selected Automaton (chkpt 1)" << endl;
 			stats[0] = 8;
 			stats[1] = 14;
 			stats[2] = 8;
 			stats[3] = 10;
 
+			cout << "You have selected Automaton (chkpt 2)" << endl;
+
 			result = Automaton(stats);
+			cout << "You have selected Automaton (chkpt 3)" << endl;
 			break;
 		case 3:  // MonsterA
 			stats[0] = 12;
@@ -81,17 +87,17 @@ Class_ Selection::class_select() {
 						 "Sorceress       (+mag)"};
 
 	int choice;
-	int classSize = sizeof(classes) / sizeof(classes[0]);
+	int classLen = sizeof(classes) / sizeof(classes[0]);
 	Class_ result;
 
 	while (true) {
 		cout << "Pick a class!" << endl;
-		for (int i = 0; i < classSize; i++) {
+		for (int i = 0; i < classLen; i++) {
 			cout << "[" << i + 1 << "] " << classes[i] << endl;
-			// Sleep(0.25);
 		}
+		cout << ">> ";
 
-		if ((cin >> choice) && (choice <= classSize)) {
+		if ( (cin >> choice) && (choice <= classLen) ) {
 			break;
 		}
 		else {
