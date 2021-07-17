@@ -3,6 +3,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Added files
+*.json
+*.jpg
+images/
+
 # User-specific files
 *.rsuser
 *.suo
@@ -361,3 +366,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+TextRPGC++/.vscode/settings.json
+TextRPGC++/images/3 Wise Ones.jpg
