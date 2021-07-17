@@ -31,7 +31,7 @@ randEnemy::randEnemy() {
 	beastMoves.push_back(Rake());
 	beastMoves.push_back(Fangs());
 	beastMoves.push_back(Slam());
-	beastMoves.push_back(Shed());
+	beastMoves.push_back(Regenerate());
 
 	automatonMoves.push_back(Fire());
 	automatonMoves.push_back(Repair());
