@@ -4,12 +4,13 @@ A text-based adventure game, written in C++ <br/>
 Made by Niklaas Cotta.<br/>
 
 # ~~~ TO-DO ~~~
-- Map
-  - Copy over map details from python version
-- Random enemy generation
-  - Moves are not kept after object creation
+- Copying Over
+  - Battle.py
+  - CharacterCreation.py
+  - MainMenu.py
+  - Map.py
+  - Story.py
 - Story
-  - Copy over story details from python version
   - Flesh out story more
   - Add an interesting mechanic
   - Random events (benefit player)
