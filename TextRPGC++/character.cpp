@@ -45,7 +45,7 @@ Enemy::Enemy() {
     randEnemy myEnemy;
 	race = myEnemy.randomRace();
 	class_ = myEnemy.randomClass();
-    int hp = 20;
+    hp = 20;
 	name = myEnemy.randomName(race);
 
     statsSize = sizeof(stats) / sizeof(stats[0]);
