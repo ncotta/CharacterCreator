@@ -6,7 +6,6 @@ Made by Niklaas Cotta.<br/>
 # ~~~ TO-DO ~~~
 - Copying Over
   - Battle.py
-  - CharacterCreation.py
   - MainMenu.py
   - Map.py
   - Story.py
